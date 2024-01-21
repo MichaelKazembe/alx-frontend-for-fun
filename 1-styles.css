@@ -1,0 +1,23 @@
+:root {
+  --holberton-red: #e1343a;
+}
+h2 a {
+  text-decoration: none;
+  position: relative;
+  color: var(--holberton-red);
+}
+
+h2 a::before {
+  content: "";
+  bottom: 0;
+  width: 0;
+  height: 0.175rem;
+  position: absolute;
+  transition: 0.9s cubic-bezier(0.17, 0.67, 0, 1.01);
+}
+
+a:hover::before {
+  left: 0;
+  background-color: var(--holberton-red);
+  width: 100%;
+}
